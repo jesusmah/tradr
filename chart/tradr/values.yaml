@@ -17,7 +17,7 @@ service:
   type: NodePort
   servicePort:
     port: 3000
-    nodePort: 31007
+    nodePort: 
 secret:
   oidc:
     create: false
