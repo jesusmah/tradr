@@ -85,6 +85,11 @@ spec:
               secretKeyRef:
                 name: {{ .Values.secret.jwt.secret_name }}
                 key: issuer
+          - name: PROXY_HOST
+            valueFrom:
+              secretKeyRef:
+                name: {{ .Values.secret.ingress_host.secret_name }}
+                key: host
         ports:
           - containerPort: {{ .Values.image.containerPort }}
         resources:

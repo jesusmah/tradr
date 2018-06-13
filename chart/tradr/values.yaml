@@ -17,7 +17,7 @@ service:
   type: NodePort
   servicePort:
     port: 3000
-    nodePort: 
+    nodePort:
 secret:
   oidc:
     create: false
@@ -45,3 +45,8 @@ secret:
     audience: c3RvY2stdHJhZGVy
     # issuer: http://stock-trader.ibm.com
     issuer: aHR0cDovL3N0b2NrLXRyYWRlci5pYm0uY29t
+  ingress_host:
+    create: false
+    secret_name: strocktrader-ingress-host
+    # Stocktrader host ip and port
+    host:
