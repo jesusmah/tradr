@@ -3,7 +3,7 @@
 replicaCount: 1
 revisionHistoryLimit: 1
 image:
-  repository: mycluster.icp:8500/default
+  repository: ibmstocktrader
   name: tradr
   tag: latest
   pullPolicy: Always
@@ -24,18 +24,20 @@ secret:
     secret_name: stocktrader-oidc
     # auth: https://idaas.iam.ibm.com/idaas/oidc/endpoint/default/authorize
     auth: aHR0cHM6Ly9pZGFhcy5pYW0uaWJtLmNvbS9pZGFhcy9vaWRjL2VuZHBvaW50L2RlZmF1bHQvYXV0aG9yaXpl
-    # id: ODllNjBlMDgtYzM5NS00
-    id: T0RsbE5qQmxNRGd0WXpNNU5TMDA=
+    # Your IBMid SSO ClientId
+    id:
     # issuer: https://idaas.iam.ibm.com
     issuer: aHR0cHM6Ly9pZGFhcy5pYW0uaWJtLmNvbQ==
-    # key: blueidprod
+    # Points to an entry in the keystore for the key to encrypt communications
+    # to the IBMid server. As a result, we can only configure the IBMid production server.
+    # key: blueidprod.
     key: Ymx1ZWlkcHJvZA==
     # name: IBMid
     name: SUJNaWQ=
     # Callback host and port number
     nodeport:
-    # secret: MzhlZTY1ZjItM2IwNC00
-    secret: TXpobFpUWTFaakl0TTJJd05DMDA=
+    # Your IBMid SSO clientSecret
+    secret:
     # token: https://idaas.iam.ibm.com/idaas/oidc/endpoint/default/token
     token: aHR0cHM6Ly9pZGFhcy5pYW0uaWJtLmNvbS9pZGFhcy9vaWRjL2VuZHBvaW50L2RlZmF1bHQvdG9rZW4=
   jwt:
