@@ -34,7 +34,11 @@ secret:
     key: Ymx1ZWlkcHJvZA==
     # name: IBMid
     name: SUJNaWQ=
-    # Callback host and port number
+    # Callback host and port number. This is the redirect URI the Trader BFF microservice sends with
+    # its requests. This redirect URI must be configured in the IBMid Client Configuration.
+    # The redirect URI looks like:
+    # https://<ICP_proxy_ip>:<Trader_BFF_NodePort>/ibm/api/social-login/redirect/IBMid
+    # Not needed by this Tradr microservice as it uses the ingress_host_secret.yaml for the redirect URI
     nodeport:
     # Your IBMid SSO clientSecret
     secret:
