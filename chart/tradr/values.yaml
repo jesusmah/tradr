@@ -57,5 +57,5 @@ secret:
     # Callback host and port number. This is the redirect URI the Tradr BFF microservice sends with
     # its requests. This redirect URI must be configured in the IBMid Client Configuration.
     # The redirect URI looks like:
-    # https://<ICP_proxy_ip>:<Tradr_BFF_NodePort>
+    # <ICP_proxy_ip>:<Tradr_BFF_NodePort>
     host:
