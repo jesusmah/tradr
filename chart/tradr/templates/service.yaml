@@ -11,6 +11,5 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.servicePort.port }}
-      nodePort: {{ .Values.service.servicePort.nodePort }}
   selector:
     app: "{{ .Release.Name }}-{{ .Chart.Name }}-selector"
